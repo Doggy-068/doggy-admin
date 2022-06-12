@@ -11,17 +11,22 @@ import { version } from '../package.json'
 const { Sider, Header, Content } = Layout
 
 const items = [
-  { label: '看板', key: '/' },
-  { label: '产品管理', key: '/product' },
-  { label: '邮箱', key: '/mailbox' }
+  { label: '看板', key: '/', path: '/' },
+  { label: '产品管理', key: '/product', path: '/product' },
+  { label: '邮箱', key: '/mailbox', path: '/mailbox/inbox' }
 ]
 
 export default () => {
   const location = useLocation()
+  const defaultSelectedKey = (() => {
+    const index = location.pathname.slice(1).indexOf('/')
+    return index > 0 ? location.pathname.slice(0, index + 1) : location.pathname
+  })()
   const navigate = useNavigate()
   const onMenuItemClick = (event: any) => {
     const key = event.key as string
-    navigate(key, { replace: true })
+    const index = items.findIndex(item => item.key === key)
+    navigate(items[index].path, { replace: true })
   }
 
   return (
@@ -46,13 +51,13 @@ export default () => {
         </Header>
         <Layout>
           <Sider theme="light">
-            <Menu onClick={onMenuItemClick} defaultSelectedKeys={[location.pathname]} items={items} />
+            <Menu onClick={onMenuItemClick} defaultSelectedKeys={[defaultSelectedKey]} items={items} />
           </Sider>
           <Content className={style['view-wrapper']}>
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/product" element={<Product />} />
-              <Route path="/mailbox" element={<Mailbox />} />
+              <Route path="/mailbox/*" element={<Mailbox />} />
               <Route path="*" element={<Error />} />
             </Routes>
           </Content>
