@@ -24,12 +24,15 @@ export default () => {
   return (
     <div className="view">
       <Menu onClick={onMenuItemClick} selectedKeys={[location.pathname]} items={items} mode="horizontal" />
-      <div className={style['view-wrapper']} style={{ height: 'calc(100% - 45.8px)' }}>
-        <Routes>
-          <Route path="" element={<Navigate to="inbox" />} />
-          <Route path="inbox" element={<Inbox />} />
-          <Route path="draftbox" element={<Draftbox />} />
-        </Routes>
+      <div style={{ height: 'calc(100% - 45.8px)', background: '#fff' }}>
+        <div className={style['view-wrapper']}>
+          <Routes>
+            <Route path="" element={<Navigate to="inbox" />} />
+            <Route path="inbox" element={<Inbox />} />
+            <Route path="draftbox" element={<Draftbox />} />
+          </Routes>
+        </div>
+        <div></div>
       </div>
     </div>
   )

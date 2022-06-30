@@ -1,4 +1,12 @@
-.view-wrapper > :global(.view) {
+.view-wrapper {
+  box-sizing: border-box;
   height: 100%;
-  background: #fff;
+  width: 360px;
+  border-right: 1px solid #eee;
+
+  > :global(.view) {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
 }
