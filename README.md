@@ -1,4 +1,4 @@
-# doggy-ui
+# doggy-admin
 
 ## Introduction
 

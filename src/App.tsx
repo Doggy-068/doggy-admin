@@ -13,7 +13,7 @@ const { Sider, Header, Content } = Layout
 const items = [
   { label: '看板', key: '/', path: '/' },
   { label: '产品管理', key: '/product', path: '/product' },
-  { label: '邮箱', key: '/mailbox', path: '/mailbox/inbox' }
+  { label: '邮箱', key: '/mailbox', path: '/mailbox' }
 ]
 
 export default () => {
