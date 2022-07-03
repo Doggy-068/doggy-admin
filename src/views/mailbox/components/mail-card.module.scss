@@ -1,0 +1,9 @@
+.mail-card {
+  &:hover {
+    background: #eee;
+  }
+
+  &:global(.selected) {
+    background: #e6f7ff;
+  }
+}
