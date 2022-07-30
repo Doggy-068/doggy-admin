@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Table, Button, Popconfirm, Typography, Space, Form, Select, Input } from 'antd'
 import { FileExcelFilled } from '@ant-design/icons'
-import { useLeast } from '../../hooks'
+import { useLeast } from '@/hooks'
 import { utils, writeFile } from 'xlsx'
 
 const productListCache = [

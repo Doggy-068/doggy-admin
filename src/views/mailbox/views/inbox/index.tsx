@@ -1,4 +1,4 @@
-import MailCard from "../../components/mail-card"
+import MailCard from '../../components/mail-card'
 
 const mailList = [
   { key: 'gg53t2t5', mailbox: 'no-reply@onedrive.com', nickname: 'One Drive', title: '这些文件是近期从你的 OneDrive 中删除的', content: '将在文件删除后 30 天从 OneDrive 回收站中永久删除它们', date: '2022/06/06' },

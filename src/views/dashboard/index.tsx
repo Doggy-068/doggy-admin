@@ -1,7 +1,7 @@
 import { Space, Row, Col, Card, Statistic, List, Typography } from 'antd'
 import { MessageOutlined, UserOutlined, BulbOutlined, PayCircleOutlined } from '@ant-design/icons'
 import { Line, LineConfig, Column, ColumnConfig, Funnel, FunnelConfig } from '@ant-design/plots'
-import dayjs from '../../plugins/dayjs'
+import dayjs from '@/lib/dayjs'
 
 const lineConfig: LineConfig = {
   data: [1, 2, 3, 4, 5, 6, 7].map((item, index) => {

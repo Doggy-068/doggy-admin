@@ -6,7 +6,7 @@ import Product from './views/product'
 import Mailbox from './views/mailbox'
 import Error from './views/error'
 import style from './App.module.scss'
-import { version } from '../package.json'
+import { version } from '@/../package.json'
 
 const { Sider, Header, Content } = Layout
 
